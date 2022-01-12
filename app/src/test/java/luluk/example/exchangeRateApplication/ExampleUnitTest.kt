@@ -1,4 +1,4 @@
-package luluk.example.myapplication
+package luluk.example.exchangeRateApplication
 
 import org.junit.Test
 

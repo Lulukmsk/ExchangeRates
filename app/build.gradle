@@ -1,13 +1,14 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "luluk.example.myapplication"
+        applicationId "luluk.example.exchangeRateApplication"
         minSdk 31
         targetSdk 31
         versionCode 1
@@ -40,4 +41,21 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.google.dagger:dagger:2.35.1'
+    implementation 'com.google.dagger:dagger-android:2.35.1'
+    implementation 'com.squareup.inject:assisted-inject-annotations-dagger2:0.5.2'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0'
+
+    kapt (
+        'com.google.dagger:dagger-compiler:2.35.1',
+        'com.google.dagger:dagger-android-processor:2.35.1',
+        'com.squareup.inject:assisted-inject-processor-dagger2:0.5.2'
+    )
 }
