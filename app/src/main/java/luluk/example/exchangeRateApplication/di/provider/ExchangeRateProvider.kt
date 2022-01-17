@@ -1,3 +1,4 @@
 package luluk.example.exchangeRateApplication.di.provider
 
-interface ExchangeRateProvider
+interface ExchangeRateProvider : ContextProvider {
+}
