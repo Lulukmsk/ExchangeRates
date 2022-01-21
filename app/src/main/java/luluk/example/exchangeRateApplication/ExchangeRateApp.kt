@@ -15,7 +15,7 @@ class ExchangeRateApp :Application(), DaggerApplication {
         buildDi()
     }
 
-    fun buildDi(){
+    private fun buildDi(){
         appComponent = ExchangeRateComponent.Builder.build(this)
     }
 
