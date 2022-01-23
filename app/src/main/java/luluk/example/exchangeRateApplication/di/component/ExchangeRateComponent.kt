@@ -2,13 +2,13 @@ package luluk.example.exchangeRateApplication.di.component
 
 import dagger.BindsInstance
 import dagger.Component
-import luluk.example.exchangeRateApplication.ExchangeRateApp
 import luluk.example.exchangeRateApplication.ExchangeRateMainActivity
 import luluk.example.exchangeRateApplication.di.DaggerApplication
 import luluk.example.exchangeRateApplication.di.module.AssistedInjectModule
 import luluk.example.exchangeRateApplication.di.module.ExchangeRateModule
-import luluk.example.exchangeRateApplication.di.provider.ExchangeRateProvider
+import luluk.example.exchangeRateApplication.ui.current.CurrentExchangeFragment
 import luluk.example.exchangeRateApplication.ui.exchange.ExchangeFragment
+import luluk.example.exchangeRateApplication.ui.favourite.FavouriteExchangeFragment
 import javax.inject.Singleton
 
 @Singleton
@@ -22,6 +22,8 @@ interface ExchangeRateComponent {
 
     fun inject(target: ExchangeRateMainActivity)
     fun inject(target: ExchangeFragment)
+    fun inject(target: CurrentExchangeFragment)
+    fun inject(target: FavouriteExchangeFragment)
 
     @Component.Builder
     interface ComponentBuilder {

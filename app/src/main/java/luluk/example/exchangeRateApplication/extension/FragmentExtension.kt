@@ -1,4 +1,4 @@
-package luluk.example.exchangeRateApplication.ui.extension
+package luluk.example.exchangeRateApplication.extension
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
