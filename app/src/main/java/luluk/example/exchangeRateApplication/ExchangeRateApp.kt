@@ -7,7 +7,7 @@ import luluk.example.exchangeRateApplication.di.provider.ExchangeRateProvider
 
 class ExchangeRateApp :Application(), DaggerApplication {
 
-    lateinit var appComponent: ExchangeRateComponent
+    private lateinit var appComponent: ExchangeRateComponent
 
     override fun onCreate() {
         super.onCreate()
@@ -19,7 +19,7 @@ class ExchangeRateApp :Application(), DaggerApplication {
         appComponent = ExchangeRateComponent.Builder.build(this)
     }
 
-    override fun getApplicationProvider(): ExchangeRateProvider {
+    override fun getApplicationComponent(): ExchangeRateComponent {
         return appComponent
     }
 }

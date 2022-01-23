@@ -7,7 +7,7 @@
 
     <fragment android:id="@+id/ExchangeFragment"
         android:name="luluk.example.exchangeRateApplication.ui.exchange.ExchangeFragment"
-        android:label="EchangeFragment"
+        android:label="ExchangeFragment"
         tools:layout="@layout/fragment_exchange_rate">
     </fragment>
 

@@ -3,6 +3,7 @@ package luluk.example.exchangeRateApplication.di.component
 import dagger.BindsInstance
 import dagger.Component
 import luluk.example.exchangeRateApplication.ExchangeRateApp
+import luluk.example.exchangeRateApplication.ExchangeRateMainActivity
 import luluk.example.exchangeRateApplication.di.DaggerApplication
 import luluk.example.exchangeRateApplication.di.module.AssistedInjectModule
 import luluk.example.exchangeRateApplication.di.module.ExchangeRateModule
@@ -17,8 +18,9 @@ import javax.inject.Singleton
         AssistedInjectModule::class
     ]
 )
-interface ExchangeRateComponent : ExchangeRateProvider {
+interface ExchangeRateComponent {
 
+    fun inject(target: ExchangeRateMainActivity)
     fun inject(target: ExchangeFragment)
 
     @Component.Builder
@@ -35,7 +37,7 @@ interface ExchangeRateComponent : ExchangeRateProvider {
             var component: ExchangeRateComponent? = null
                 private set
 
-            fun build(app: ExchangeRateApp): ExchangeRateComponent {
+            fun build(app: DaggerApplication): ExchangeRateComponent {
                 if (component == null) {
                     component = DaggerExchangeRateComponent.builder()
                         .application(app)

@@ -12,6 +12,10 @@ class ExchangeRateMainActivity : AppCompatActivity(R.layout.activity_exchange_ra
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        (applicationContext as ExchangeRateApp).getApplicationComponent()
+            .inject(this)
+
         setContentView(R.layout.activity_exchange_rate)
 
         navHost = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment

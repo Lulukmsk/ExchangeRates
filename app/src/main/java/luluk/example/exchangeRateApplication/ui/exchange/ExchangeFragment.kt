@@ -1,15 +1,15 @@
 package luluk.example.exchangeRateApplication.ui.exchange
 
-import luluk.example.exchangeRateApplication.di.component.ExchangeRateComponent
+import luluk.example.exchangeRateApplication.R
 import luluk.example.exchangeRateApplication.ui.base.BaseFragment
 import luluk.example.exchangeRateApplication.ui.extension.viewModel
 import luluk.example.exchangeRateApplication.viewmodel.exchange.ExchangeViewModel
 import javax.inject.Inject
 
-abstract class ExchangeFragment(layoutRes: Int) : BaseFragment(layoutRes) {
+class ExchangeFragment(layoutRes: Int = R.layout.fragment_exchange_rate) : BaseFragment(layoutRes) {
 
     override fun inject() {
-        ExchangeRateComponent.Builder.component?.inject(this)
+        componentProvider.inject(this)
     }
 
     @Inject
