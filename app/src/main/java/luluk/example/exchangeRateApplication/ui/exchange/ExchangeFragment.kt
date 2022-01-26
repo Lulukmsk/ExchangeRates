@@ -31,7 +31,7 @@ class ExchangeFragment(layoutRes: Int = R.layout.fragment_exchange) : BaseFragme
             tabAdapter = ExchangeFragmentTabAdapter(this)
             binding.exchangePager.adapter = tabAdapter
             tabMediator = TabLayoutMediator( binding.exchangeTab, binding.exchangePager) { tab, position ->
-                tab.text = tabAdapter.dataSource.getTitle(position)
+                tab.text = tabAdapter.createTitle(position)
             }
             tabMediator.attach()
         }

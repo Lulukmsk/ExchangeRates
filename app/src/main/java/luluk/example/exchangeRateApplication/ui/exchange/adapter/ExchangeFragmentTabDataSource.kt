@@ -7,6 +7,7 @@ import luluk.example.exchangeRateApplication.ui.base.adapter.BaseFragmentTabData
 import luluk.example.exchangeRateApplication.ui.current.CurrentExchangeFragment
 import luluk.example.exchangeRateApplication.ui.exchange.adapter.ExchangeFragmentTabDataSource.Type.Companion.FAVOURITE
 import luluk.example.exchangeRateApplication.ui.exchange.adapter.ExchangeFragmentTabDataSource.Type.Companion.MAIN
+import luluk.example.exchangeRateApplication.ui.favourite.FavouriteExchangeFragment
 
 class ExchangeFragmentTabDataSource : BaseFragmentTabDataSource {
 
@@ -22,7 +23,7 @@ class ExchangeFragmentTabDataSource : BaseFragmentTabDataSource {
     private val mFragmentTabItemsSparseArray: SparseArray<ExchangeFragmentTabItem> = SparseArray<ExchangeFragmentTabItem>()
         .apply {
             put(MAIN, ExchangeFragmentTabItem(CurrentExchangeFragment(), "Популярное"))
-            put(FAVOURITE, ExchangeFragmentTabItem(CurrentExchangeFragment(), "Избранное"))
+            put(FAVOURITE, ExchangeFragmentTabItem(FavouriteExchangeFragment(), "Избранное"))
         }
 
     override val count: Int = mFragmentTabItemsSparseArray.size()
