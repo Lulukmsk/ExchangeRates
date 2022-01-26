@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Exchange Rate Application</string>
+    <string name="filter_icon_description_text">filter</string>
 </resources>

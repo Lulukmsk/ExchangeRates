@@ -5,11 +5,11 @@ import androidx.annotation.IntDef
 import androidx.fragment.app.Fragment
 import luluk.example.exchangeRateApplication.ui.base.adapter.BaseFragmentTabDataSource
 import luluk.example.exchangeRateApplication.ui.current.CurrentExchangeFragment
-import luluk.example.exchangeRateApplication.ui.exchange.adapter.ExchangeFragmentTabDataSource.Type.Companion.FAVOURITE
-import luluk.example.exchangeRateApplication.ui.exchange.adapter.ExchangeFragmentTabDataSource.Type.Companion.MAIN
+import luluk.example.exchangeRateApplication.ui.exchange.adapter.ExchangeTabFragmentTabDataSource.Type.Companion.FAVOURITE
+import luluk.example.exchangeRateApplication.ui.exchange.adapter.ExchangeTabFragmentTabDataSource.Type.Companion.MAIN
 import luluk.example.exchangeRateApplication.ui.favourite.FavouriteExchangeFragment
 
-class ExchangeFragmentTabDataSource : BaseFragmentTabDataSource {
+class ExchangeTabFragmentTabDataSource : BaseFragmentTabDataSource {
 
     @kotlin.annotation.Retention(AnnotationRetention.SOURCE)
     @IntDef(MAIN, FAVOURITE)
@@ -20,10 +20,10 @@ class ExchangeFragmentTabDataSource : BaseFragmentTabDataSource {
         }
     }
 
-    private val mFragmentTabItemsSparseArray: SparseArray<ExchangeFragmentTabItem> = SparseArray<ExchangeFragmentTabItem>()
+    private val mFragmentTabItemsSparseArray: SparseArray<ExchangeTabFragmentTabItem> = SparseArray<ExchangeTabFragmentTabItem>()
         .apply {
-            put(MAIN, ExchangeFragmentTabItem(CurrentExchangeFragment(), "Популярное"))
-            put(FAVOURITE, ExchangeFragmentTabItem(FavouriteExchangeFragment(), "Избранное"))
+            put(MAIN, ExchangeTabFragmentTabItem(CurrentExchangeFragment(), "Популярное"))
+            put(FAVOURITE, ExchangeTabFragmentTabItem(FavouriteExchangeFragment(), "Избранное"))
         }
 
     override val count: Int = mFragmentTabItemsSparseArray.size()

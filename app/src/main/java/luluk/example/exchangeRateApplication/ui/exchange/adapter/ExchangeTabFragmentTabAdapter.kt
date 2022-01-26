@@ -4,6 +4,6 @@ import androidx.fragment.app.Fragment
 import luluk.example.exchangeRateApplication.ui.base.adapter.BaseFragmentTabAdapter
 import luluk.example.exchangeRateApplication.ui.base.adapter.BaseFragmentTabDataSource
 
-class ExchangeFragmentTabAdapter(fragment: Fragment): BaseFragmentTabAdapter(fragment) {
-    override val dataSource: BaseFragmentTabDataSource = ExchangeFragmentTabDataSource()
+class ExchangeTabFragmentTabAdapter(fragment: Fragment): BaseFragmentTabAdapter(fragment) {
+    override val dataSource: BaseFragmentTabDataSource = ExchangeTabFragmentTabDataSource()
 }

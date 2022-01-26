@@ -4,18 +4,18 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.google.android.material.tabs.TabLayoutMediator
 import luluk.example.exchangeRateApplication.R
-import luluk.example.exchangeRateApplication.databinding.FragmentExchangeBinding
+import luluk.example.exchangeRateApplication.databinding.FragmentExchangeTabBinding
 import luluk.example.exchangeRateApplication.ui.base.BaseFragment
 import luluk.example.exchangeRateApplication.extension.viewModel
-import luluk.example.exchangeRateApplication.ui.exchange.adapter.ExchangeFragmentTabAdapter
+import luluk.example.exchangeRateApplication.ui.exchange.adapter.ExchangeTabFragmentTabAdapter
 import luluk.example.exchangeRateApplication.viewmodel.exchange.ExchangeViewModel
 import javax.inject.Inject
 
-class ExchangeFragment(layoutRes: Int = R.layout.fragment_exchange) : BaseFragment<FragmentExchangeBinding>(layoutRes) {
+class ExchangeTabFragment(layoutRes: Int = R.layout.fragment_exchange_tab) : BaseFragment<FragmentExchangeTabBinding>(layoutRes) {
 
     @Inject
     lateinit var viewModelFactory: ExchangeViewModel.Factory
-    lateinit var tabAdapter: ExchangeFragmentTabAdapter
+    lateinit var tabAdapter: ExchangeTabFragmentTabAdapter
     lateinit var tabMediator: TabLayoutMediator
 
     override val viewModel: ExchangeViewModel by viewModel {
@@ -28,7 +28,7 @@ class ExchangeFragment(layoutRes: Int = R.layout.fragment_exchange) : BaseFragme
 
     override fun setupViews() {
         if(!this::tabAdapter.isInitialized){
-            tabAdapter = ExchangeFragmentTabAdapter(this)
+            tabAdapter = ExchangeTabFragmentTabAdapter(this)
             binding.exchangePager.adapter = tabAdapter
             tabMediator = TabLayoutMediator( binding.exchangeTab, binding.exchangePager) { tab, position ->
                 tab.text = tabAdapter.createTitle(position)
@@ -40,7 +40,7 @@ class ExchangeFragment(layoutRes: Int = R.layout.fragment_exchange) : BaseFragme
     override fun setBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): FragmentExchangeBinding {
-        return FragmentExchangeBinding.inflate(inflater,container, false)
+    ): FragmentExchangeTabBinding {
+        return FragmentExchangeTabBinding.inflate(inflater,container, false)
     }
 }

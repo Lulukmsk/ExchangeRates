@@ -4,14 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.33645833333333336" />
+        <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/drawable/ic_baseline_filter_list_24.xml" value="0.3223958333333333" />
+        <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/drawable/ic_filter.xml" value="0.5111111111111111" />
         <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/drawable/ic_launcher_background.xml" value="0.33645833333333336" />
         <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/layout/activity_exchange_rate.xml" value="0.3333333333333333" />
         <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/layout/activity_main.xml" value="0.3203125" />
         <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/layout/fragment_echange_current.xml" value="0.45108695652173914" />
         <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/layout/fragment_exchange.xml" value="0.33177083333333335" />
-        <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/layout/fragment_exchange_current.xml" value="0.2318840579710145" />
+        <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/layout/fragment_exchange_current.xml" value="0.3333333333333333" />
         <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/layout/fragment_exchange_favourite.xml" value="0.45108695652173914" />
         <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/layout/fragment_exchange_rate.xml" value="0.31302083333333336" />
+        <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/layout/fragment_exchange_tab.xml" value="0.4438405797101449" />
+        <entry key="..\:/Android/Github/ExchangeRates/app/src/main/res/layout/sp_item.xml" value="0.4438405797101449" />
       </map>
     </option>
   </component>

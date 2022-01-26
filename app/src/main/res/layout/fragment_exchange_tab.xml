@@ -19,8 +19,7 @@
         app:tabIconTint="@color/purple_200"
         app:tabIndicatorColor="@color/white"
         app:tabSelectedTextColor="@color/white"
-        app:tabTextColor="@color/purple_200">
-    </com.google.android.material.tabs.TabLayout>
+        app:tabTextColor="@color/purple_200"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/exchange_pager"
@@ -29,7 +28,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/exchange_tab">
-
-    </androidx.viewpager2.widget.ViewPager2>
+        app:layout_constraintBottom_toTopOf="@id/exchange_tab"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
